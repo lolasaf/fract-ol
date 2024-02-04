@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:30:48 by wel-safa          #+#    #+#             */
-/*   Updated: 2023/05/17 21:07:53 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/01/28 17:21:56 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <bsd/string.h>
 # include <stdio.h>
+# include "ft_printf.h"
 
 typedef struct s_list
 {

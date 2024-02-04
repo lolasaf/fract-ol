@@ -6,13 +6,13 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 17:06:10 by wel-safa          #+#    #+#             */
-/*   Updated: 2023/07/03 17:06:40 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/01/28 17:20:48 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_fd(int n, int fd, int count)
+int	ft_putnbr_count(int n, int fd, int count)
 {
 	long int	ln;
 	char		c;
@@ -28,8 +28,8 @@ int	ft_putnbr_fd(int n, int fd, int count)
 	}
 	if (ln / 10 > 0)
 	{
-		count = ft_putnbr_fd(ln / 10, fd, count);
-		count = ft_putnbr_fd(ln % 10, fd, count);
+		count = ft_putnbr_count(ln / 10, fd, count);
+		count = ft_putnbr_count(ln % 10, fd, count);
 	}
 	if (ln / 10 == 0)
 	{

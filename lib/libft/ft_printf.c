@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 14:05:21 by wel-safa          #+#    #+#             */
-/*   Updated: 2023/07/03 17:55:21 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/01/28 17:21:20 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_process_string(const char *str, va_list args, size_t i, int count)
 			else if (str[i] == 'p')
 				count += ft_putptr(va_arg(args, void *));
 			else if (str[i] == 'd' || str[i] == 'i')
-				count += ft_putnbr_fd(va_arg(args, int), 1, 0);
+				count += ft_putnbr_count(va_arg(args, int), 1, 0);
 			else if (str[i] == 'u')
 				count += ft_putunsignednbr_fd(va_arg(args, unsigned int), 1, 0);
 			else if (str[i] == 'x' || str[i] == 'X')
@@ -153,4 +153,3 @@ int	ft_printf(const char *str, ...)
 	printf("%i\n", printf(""));
 	printf("%i\n", ft_printf(""));
 }*/
-

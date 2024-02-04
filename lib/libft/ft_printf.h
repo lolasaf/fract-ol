@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 14:11:58 by wel-safa          #+#    #+#             */
-/*   Updated: 2023/07/03 17:12:26 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/01/28 19:34:36 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlen(const char *s);
 int		ft_strlen_valid(char *str);
 int		ft_printstr(char *s);
 int		ft_putchar(char c);
-int		ft_putnbr_fd(int n, int fd, int count);
+int		ft_putnbr_count(int n, int fd, int count);
 int		ft_putunsignednbr_fd(unsigned int n, int fd, int count);
 int		ft_putnbr_base(unsigned long long nb, char *base, int count);
 int		ft_putnbr_case(char c, unsigned int nbr);
