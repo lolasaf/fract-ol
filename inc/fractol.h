@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 18:47:30 by wel-safa          #+#    #+#             */
-/*   Updated: 2024/02/04 21:33:15 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/02/17 20:45:08 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,18 @@
 
 /*include more h files here from inc dir*/
 
-# define TITLE		"fract-ol"
-# define WIN_SIZE	600.0
+# define TITLE "fract-ol"
+# define MANDEL 1
+# define JULIA 2 
+# define WIN_WIDTH 1000
+# define WIN_HEIGHT 800
+# define SPACE 32
+# define SHIFT 65506
 # define ESC 65307
 # define UP 65362
 # define DOWN 65364
 # define RIGHT 65363
 # define LEFT 65361
-
 # define B_COLOR 0xFCBE11
 
 enum {
@@ -46,6 +50,7 @@ enum {
 
 typedef struct s_img
 {
+	int		type;
 	void	*mlx;
 	void	*win;
 	void	*img_ptr;
@@ -58,14 +63,35 @@ typedef struct s_img
 	double	sy0;
 	double	px;
 	double	py;
-	double	it;
-	double	it_max;
+	int		it;
+	int		it_max;
 	double	x;
 	double	y;
 	double	sx;
 	double	sy;
+	double	a;
+	double	b;
 	double	xtemp;
 	int		color;
 }				t_img;
+
+int		put_pixel_to_img(t_img *img, int x, int y, int color);
+void	zero_img(t_img *img);
+int		exit_win(t_img *img);
+int		create_trgb(int t, int r, int g, int b);
+
+int		keyhook(int key, t_img *data);
+int		mousehook(int code, int x, int y, t_img *img);
+
+void	mandelbrot(t_img *img);
+void	init_mandel(t_img *img);
+void	calc_mandel(t_img *img);
+
+int		zoomin(int x, int y, t_img *img);
+int		zoomout(int x, int y, t_img *img);
+
+void	filledjulia(t_img *img);
+void	init_julia(t_img *img);
+void	calc_julia(t_img *img);
 
 #endif

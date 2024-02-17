@@ -6,7 +6,7 @@
 #    By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 17:52:21 by wel-safa          #+#    #+#              #
-#    Updated: 2024/01/21 19:20:30 by wel-safa         ###   ########.fr        #
+#    Updated: 2024/02/17 20:49:03 by wel-safa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MINILIBXDIR := lib/minilibx-linux
 LIBFT := $(LIBFTDIR)/libft.a
 LIBMLX := $(MINILIBXDIR)/libmlx_Linux.a
 #--- SOURCES ---
-SRCS := $(addprefix $(SRCDIR)/, main.c)
+SRCS := $(addprefix $(SRCDIR)/, main.c wix.c hook.c mandel.c julia.c zoom.c)
 #--- OBJECTS ---
 OBJS := $(addprefix $(OBJDIR)/, $(notdir $(SRCS:.c=.o)))
 #--- HEADERS ---
@@ -31,7 +31,7 @@ MLXHEADER := /usr/local/include
 #--- FLAGS ---
 CC := cc
 CFLAGS := -Wall -Wextra -Werror -I$(INCDIR) -I$(LIBFTDIR) -I$(MINILIBXDIR) \
-	-I$(MLXHEADER)
+	-I$(MLXHEADER) -g
 LDFLAGS := -L$(LIBFTDIR) -L$(MINILIBXDIR)
 LDLIBS := -lft -lmlx
 LFLAGS := -lbsd -lXext -lX11 -lm
