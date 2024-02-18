@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 18:46:34 by wel-safa          #+#    #+#             */
-/*   Updated: 2024/02/18 14:08:58 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/02/18 20:56:30 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ void	ft_datoi_2(const char *nptr, long double *res, size_t *i)
 			(*i)++;
 		}
 	}
+	if (nptr[*i])
+		printerror();
+	else if (nptr[*i - 1] == '.')
+		printerror();
 }
 
 double	ft_datoi(const char *nptr)
@@ -62,8 +66,9 @@ double	ft_datoi(const char *nptr)
 	}
 	else if (nptr[i] == '+')
 		i++;
-	ft_datoi_2(nptr, &res, &i);
-	if (nptr[i])
+	if (nptr[i] >= '0' && nptr[i] <= '9')
+		ft_datoi_2(nptr, &res, &i);
+	else
 		printerror();
 	return (res * sign);
 }
@@ -88,6 +93,8 @@ void	main_init(int argc, char **argv, t_img *img)
 		else
 			printerror();
 	}
+	else
+		printerror();
 }
 
 int	main(int argc, char **argv)

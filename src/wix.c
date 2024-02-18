@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:17:31 by wel-safa          #+#    #+#             */
-/*   Updated: 2024/02/17 19:32:33 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/02/18 20:47:39 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int	exit_win(t_img *img)
 {
 	mlx_destroy_image(img->mlx, img->img_ptr);
 	mlx_destroy_window(img->mlx, img->win);
+	mlx_destroy_display(img->mlx);
+	free(img->mlx);
 	exit (1);
 }
 
