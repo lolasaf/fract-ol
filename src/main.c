@@ -6,7 +6,7 @@
 /*   By: wel-safa <wel-safa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 18:46:34 by wel-safa          #+#    #+#             */
-/*   Updated: 2024/02/17 20:44:24 by wel-safa         ###   ########.fr       */
+/*   Updated: 2024/02/18 14:08:58 by wel-safa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,7 @@ void	main_init(int argc, char **argv, t_img *img)
 		{
 			img->type = JULIA;
 			img->a = ft_datoi(argv[2]);
-			printf("%f\n", img->a);
 			img->b = ft_datoi(argv[3]);
-			printf("%f\n", img->b);
 		}
 		else
 			printerror();
